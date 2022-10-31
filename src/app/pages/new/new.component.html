@@ -1,0 +1,33 @@
+<h2>Afegir nova Vacanca</h2>
+
+<form [formGroup]="newForm" id="newForm" name="newForm">
+
+    <div>
+        <label for="nom">*Nom</label>
+        <input #formControlNom id="nom" formControlName="nom" />
+    </div>
+    <div *ngIf="stateObject.submitted && !newForm.get('nom')?.valid">
+        <span  style="color: red">Este campo es obligatorio</span>
+    </div>
+
+    <div>
+        <label for="preu">*Preu</label>
+        <input #formControlPreu id="preu" formControlName="preu" />
+    </div>
+    <div *ngIf="stateObject.submitted && !newForm.get('preu')?.valid">
+        <span style="color: red">Este campo es obligatorio</span>
+    </div>
+
+    <div>
+        <label for="pais">Pais</label>
+        <input id="pais"  formControlName="pais" />
+    </div>
+
+    <div>
+        <label for="descripcio">Descripció</label>
+        <textarea id="descripcio"  formControlName="descripcio"></textarea>
+    </div>
+
+    <button (click)="addVacanca()">Afegir</button>
+
+</form>
