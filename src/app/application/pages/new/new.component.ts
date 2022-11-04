@@ -41,7 +41,7 @@ export class NewComponent implements OnInit {
       v.preu = this.newForm.get('preu')?.value;
       this.vacancesService.addVacanca(v);
       this.stateObject.submitted = false;
-      this.router.navigate(['/home']);
+      this.router.navigate(['/application/home']);
     }
   }
 
