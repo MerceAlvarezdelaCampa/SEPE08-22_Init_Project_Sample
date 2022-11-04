@@ -1,0 +1,18 @@
+<h1>Login</h1>
+
+
+<form [formGroup]="loginForm" id="loginForm" name="loginForm">
+
+    <div>
+        <label for="nom">*Nom</label>
+        <input #formControlNom id="nom" formControlName="nom" />
+    </div>
+
+    <div>
+        <label for="pwd">*Password</label>
+        <input #formControlPreu id="pwd" formControlName="pwd" />
+    </div>
+
+    <button (click)="login()">Login</button>
+
+</form>
