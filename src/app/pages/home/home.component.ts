@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, resolveForwardRef } from '@angular/core';
 import { Vacanca } from 'src/app/models/vacanca.model';
 import { VacancesService } from 'src/app/services/vacances.service';
 
@@ -9,7 +9,7 @@ import { VacancesService } from 'src/app/services/vacances.service';
 })
 export class HomeComponent implements OnInit {
 
-  vacances: Vacanca[] = []
+  vacances: Vacanca[] = [];
 
   constructor(private vacancesService: VacancesService) { }
 
