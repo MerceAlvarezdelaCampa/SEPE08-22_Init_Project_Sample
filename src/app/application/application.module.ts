@@ -9,6 +9,7 @@ import { ApplicationComponent } from './application.component';
 import { NewComponent } from './pages/new/new.component';
 import { HomeComponent } from './pages/home/home.component';
 import { DetailComponent } from './pages/detail/detail.component';
+import { SharedModule } from '../shared/shared.module';
 
 @NgModule({
   declarations: [
@@ -21,8 +22,8 @@ import { DetailComponent } from './pages/detail/detail.component';
     CommonModule,
     ApplicationRoutingModule,
     FormsModule,
-    ReactiveFormsModule
-
+    ReactiveFormsModule,
+    SharedModule
   ]
 })
 export class ApplicationModule { }

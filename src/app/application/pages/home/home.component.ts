@@ -17,4 +17,8 @@ export class HomeComponent implements OnInit {
     this.vacances = this.vacancesService.getVacances();
   }
 
+  showAlert(vacanca: Vacanca) {
+    alert(vacanca.nom);
+  }
+
 }

@@ -1,9 +1,8 @@
 <h2>Llistat</h2>
 
-<ul>
-    <li *ngFor="let vacanca of vacances">{{vacanca.nom}}</li>
-</ul>
-
+<div *ngFor="let vacanca of vacances">
+    <app-vacanca-card [vacanca]="vacanca" (onButtonClicked)="showAlert(vacanca)"></app-vacanca-card>
+</div>
 
 <div class="melinks" [routerLink]="'/application/new'">Afegir una nova vacanca</div>
 
